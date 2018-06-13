@@ -1,5 +1,78 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Camphor,Open Sans,system-ui,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  box-shadow: .25px .25px .25px .25px #333333;
+}
+
+.Logo {
+  padding: 20px;
+}
+
+.Search {
+  padding: 20px;
+}
+
+.Menu {
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Menu li {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Menu li:hover {
+  box-shadow: 1px 1px .25px .25px #333333;
+  border-radius: 6px;
+}
+
+.Menu .material-icons {
+  padding-right: 20px;
+}
+
+.Explore {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  justify-content: space-around;
+  align-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.Product-item {
+  box-shadow: 1px 1px .25px .25px #333333;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.like {
+  display: block;
+  padding: 20px;
 }
