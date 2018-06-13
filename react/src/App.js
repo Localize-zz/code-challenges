@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Navbar from './Components/Navbar';
+import Explore from './Components/Explore';
+import products from './sampleData/sampleData'; 
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { products };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/* <header className="App-header">
+          <h1 className="App-title">Wribbn Code Challenge</h1>
+        </header> */}
+        <Navbar />
+        <Explore products={this.state.products}/>
       </div>
     );
   }
