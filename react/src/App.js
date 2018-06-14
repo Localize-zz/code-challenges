@@ -10,14 +10,28 @@ class App extends Component {
     this.state = { products };
   }
 
+  apiCall = (increment, id, resolve) => {
+    let likesUpdate = Object.assign({}, this.state.products);
+    if (increment) {
+      likesUpdate[id].likes++;
+      this.setState({ products: likesUpdate }, console.log('Likes updated', this.state.products))
+      return resolve('incremented');
+    } else {
+      likesUpdate[id].likes--;
+      this.setState({ products: likesUpdate }, console.log('Likes updated', this.state.products))
+      return resolve('decremented');
+    }
+  }
+
+  handleLikes = (increment, id) => new Promise ((resolve) => {
+    setTimeout(() => {this.apiCall(increment, id, resolve)}, 1000);
+  });
+
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <h1 className="App-title">Wribbn Code Challenge</h1>
-        </header> */}
         <Navbar />
-        <Explore products={this.state.products}/>
+        <Explore products={this.state.products} handleLikes={this.handleLikes}/>
       </div>
     );
   }
