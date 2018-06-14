@@ -43,7 +43,7 @@ const products = {
   },
   7: {
     name: 'Volleyball',
-    price: 5,
+    price: 5.99,
     id: 7,
     image: '7.png',
     likes: 0,

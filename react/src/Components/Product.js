@@ -21,6 +21,7 @@ class Product extends React.Component {
   } 
 
   render() {
+    let price = Number(this.props.data.price.toFixed(2)).toLocaleString('en');
     return (
       <div className="Product-item" onClick={this.handleClick}>
         {this.state.update ? <div className="loader" /> : this.state.liked ? <i className="material-icons liked">stars</i> : <i className="material-icons not-liked">star_border</i>}
@@ -29,7 +30,7 @@ class Product extends React.Component {
           {this.props.data.name}
         </div>
         <div className="product-price">
-          ${this.props.data.price}
+          ${price}
         </div>
       </div>
 
