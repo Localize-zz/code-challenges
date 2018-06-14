@@ -1,21 +1,17 @@
-# React
-We love building slick shopping experiences for the big screen using awesome tech! If that's your jam, check out the challenge below and share your skills. :)
+## Starting the App
+1) Clone the git repo to your local machine.
+2) Run NPM install.
+3) Run npm start to run the app in dev mode. Open http://localhost:3000 to view it in the browser.
 
-## The Task
-We do shopping. Shopping has products. People like products. So, the challenge is to make some products that people like. Easy peasy.
+## Notes
+- React app setup was bootstrapped via Create React App. There are files here (like registerServiceWorker.js) that are specific to that and not my work.
 
-  1. Make a generic Navbar with a logo, dummy search bar, and some fake menu items.
-  2. In the main page, create a single-column layout with a handful of random Products (like a Feed view). Each Product should have an image, a title, and a price.
-  3. Give each Product a Like button.
-  4. When the Like button is clicked, it should toggle an "active" state. It should also increment/decrement a counter that represents the total number of "likes" for the associated Product.
+- The 'like' feature works asynchronously, hence the 'loading' spinner.
 
-## The Rules
-No need to build a server/DB, this is front-end only and fake data is just fine. Please submit results within one week.
+- I left console.logs in the code so that Jesse can see product 'likes' being incremented and decremented on the state.
+ 
+- 
 
-## Extra Credit
-Not at all necessary, but we won't stop you. =)
 
-  - Make the Like button update asynchronously (to simulate network overhead)
-  - Do ^that optimistically ;-)
-  - Persist app state to localStorage..?
-  - Any other cool things you want
+
+
