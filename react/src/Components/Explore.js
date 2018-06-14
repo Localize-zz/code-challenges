@@ -3,7 +3,7 @@ import Product from './Product';
 
 const Explore = props => (
   <div className="Explore">
-    {props.products.map(product => <Product key="product.id" data={product} /> )}
+    {Object.values(props.products).map(product => <Product key={product.id} data={product} handleLikes={props.handleLikes} /> )}
   </div>
 );
 

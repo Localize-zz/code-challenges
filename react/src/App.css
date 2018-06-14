@@ -1,28 +1,151 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  box-shadow: .25px .25px .25px .25px #333333;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.Logo {
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.Logo img {
+  height: 60px;
+  margin: 30px auto 0 auto;
+  display: block;
 }
 
-.App-intro {
-  font-size: large;
+.Search {
+  padding: 10px 20px 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Search input {
+  border-radius: 6px;
+  height: 30px;
+  padding: 10px;
 }
+
+.Menu {
+  padding: 10px 20px 0 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.Menu-list {
+  margin-top: 15px;
+  padding: 0;
+}
+
+.Menu li {
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  margin-bottom: 10px;
+}
+
+.Menu li:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25), 0 2px 5px rgba(0,0,0,0.22);
+  color: #4fc1a1;
+  text-shadow: 5px rgba(0,0,0,0.25)
+}
+
+.Menu .material-icons {
+  padding-right: 20px;
+}
+
+.Explore {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(120deg, #b8edde, #4fc1a1);
+  overflow: scroll;
+}
+
+.Product-item {
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 20px;
+  height: max-content;
+  width: max-content;
+  min-width: 200px;
+  min-height: 285px;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+}
+
+.Product-item:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.not-liked:hover {
+  transform: scale(1.2);
+  color: #4fc1a1
+}
+
+.Product-item img {
+  display: block;
+  margin: 20px auto 20px auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.product-price {
+  font-weight: 200;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.liked {
+  display: block;
+  float: right;
+  color: #f8c306;
+  text-shadow: 1px 1px 1px 1px #333333;
+}
+
+.not-liked {
+  display: block;
+  float: right;
+}
+
+.loader {
+  display: block;
+  float: right;
+  border: 5px solid #ffffff; 
+  border-top: 5px solid #4fc1a1; 
+  border-bottom: 5px solid #4fc1a1;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
