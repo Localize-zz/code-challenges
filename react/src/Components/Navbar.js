@@ -6,6 +6,9 @@ const Navbar = () => (
     <div className="Logo">
       <img src={logo} className="Wribbn-logo" alt="logo" />
     </div>
+    <div className="small-screen">
+      <i className="material-icons">menu</i>
+    </div>
     <div className="Menu">
       <div className="Menu-item"><i className="material-icons">explore</i>Explore</div>
       <div className="Menu-item"><i className="material-icons">chat_bubble</i>Chat</div>

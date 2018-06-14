@@ -1,12 +1,15 @@
 .App {
   display: block;
-
 }
 
 .Navbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.small-screen {
+  display: none;
 }
 
 .Logo {
@@ -134,5 +137,26 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 540px) {
+  .Menu {
+    display: none;
+  }
+
+  .Search {
+    display: none;
+  }
+
+  .small-screen {
+    display: inline-block;
+    font-size: 50px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin-left: 20px;
+  }
+
+  .small-screen:hover {
+    transform: scale(1.5  );
+  }
 }
 
