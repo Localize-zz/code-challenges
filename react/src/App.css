@@ -1,5 +1,6 @@
 .App {
   display: block;
+  height: 100%;
 }
 
 .Navbar {
@@ -43,6 +44,11 @@
   margin: auto;
 }
 
+.Menu a {
+  color: inherit; 
+  text-decoration: inherit;
+}
+
 .Menu-item {
   padding: 10px 25px 10px 25px;
   display: flex;
@@ -59,16 +65,47 @@
   padding-right: 20px;
 }
 
-.Explore {
+.header {
+  width: 100%;
+  color: #ffffff;
+  text-shadow: .25px 1px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.header h1 {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.teleport {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: block;
+  vertical-align: 5px;
+  margin: auto;
+}
+
+.teleport:hover {
+  background-color: #4fc1a1;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.Feed {
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
   padding: 20px;
-  height: 100%;
+  min-height: 100%;
+  height: fit-content;
   width: 100%;
   background-image: linear-gradient(120deg, #b8edde, #4fc1a1);
-  overflow: scroll;
 }
 
 .Product-item {
@@ -120,6 +157,73 @@
 .not-liked {
   display: block;
   float: right;
+}
+
+.Explore {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  padding: 20px;
+  min-height: 100%;
+  height: fit-content;
+  width: 100%;
+  background-image: linear-gradient(120deg, #b8edde, #4fc1a1);
+}
+
+.Store {
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 20px;
+  height: max-content;
+  width: max-content;
+  min-width: 60%;
+  min-height: 20px;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.Store .distance {
+  font-size: 14px;
+  color: grey
+}
+
+.Store .material-icons {
+  display: inline-block;
+  vertical-align: -2px;
+  font-size: 14px;
+}
+
+.Favorites {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  padding: 20px;
+  min-height: 100%;
+  height: fit-content;
+  width: 100%;
+  background-image: linear-gradient(120deg, #b8edde, #4fc1a1);
+}
+
+.FavItem {
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 20px;
+  height: max-content;
+  width: max-content;
+  min-width: 300px;
+  min-height: 100px;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .loader {

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom'
+import SocketService from './services/socketService';
 import Navbar from './Components/Navbar';
+import Feed from './Components/Feed';
 import Explore from './Components/Explore';
+import Favorites from './Components/Favorites';
 import products from './sampleData/sampleData'; 
 import './App.css';
 
@@ -8,6 +12,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { products };
+  }
+  
+  componentDidMount() {
+    SocketService.setUser('5b3462ee297023145796de30')
   }
 
   apiCall = (increment, id, resolve) => {
@@ -31,7 +39,14 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Explore products={this.state.products} handleLikes={this.handleLikes}/>
+        <Switch>
+            <Route exact path='/' component={Explore}/>
+            {/* both /roster and /roster/:number begin with /roster */}
+            <Route path='/feed' render={()=><Feed products={this.state.products} handleLikes={this.handleLikes}/>}/>
+            <Route path='/explore' component={Explore}/>
+            <Route path='/favorites' component={Favorites}/>
+        </Switch>
+        
       </div>
     );
   }
